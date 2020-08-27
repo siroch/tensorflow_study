@@ -49,3 +49,67 @@ one_arr = np.ones((3, 2))
 print(one_arr)
 print(one_arr.dtype, one_arr.shape)
 print("-----------------------------")
+
+arr1 = np.arange(10)
+print('arr1:\n',arr1)
+arr2 = arr1.reshape((2, 5))
+print('arr2:\n',arr2)
+arr3 = arr1.reshape((5, 2))
+print('arr3:\n',arr3)
+# print(arr1.reshape((4,3))) <-- 크기가 안맞아서 에러남
+print("-----------------------------")
+
+arr1 = np.arange(10)
+print('arr1:\n',arr1)
+arr2 = arr1.reshape((-1, 5))
+print('arr2:\n',arr2, arr2.shape)
+arr3 = arr1.reshape((5, -1))
+print('arr3:\n',arr3, arr3.shape)
+print("-----------------------------")
+
+
+arr1 = np.arange(8)
+arr3d = arr1.reshape((2, 2, 2))
+print('arr3d:\n',arr3d.tolist())
+
+arr2 = arr3d.reshape(-1, 1)
+print('arr2:\n',arr2.tolist(),'\narr2 shape:\n',arr2.shape)
+
+arr3 = arr1.reshape((-1, 1))
+print('arr3:\n',arr3.tolist(),'\narr3 shape:\n',arr3.shape)
+print("-----------------------------")
+
+
+arr1 = np.arange(start=1, stop=10)
+print('arr1:',arr1)
+value = arr1[2]
+print('value:',value)
+print(type(value))
+print("-----------------------------")
+
+arr1d = np.arange(start=1, stop=10)
+arr2d = arr1d.reshape(3, 3)
+print(arr2d)
+
+print('(row=0, col=0) index 가리키는 값:', arr2d[0, 0])
+print('(row=0, col=1) index 가리키는 값:', arr2d[0, 1])
+print('(row=1, col=0) index 가리키는 값:', arr2d[1, 0])
+print('(row=2, col=2) index 가리키는 값:', arr2d[2, 2])
+print("-----------------------------")
+
+arr1 = np.arange(start=1, stop=10)
+arr3 = arr1[arr1>5]
+print(arr3)
+print("-----------------------------")
+
+arr1 = np.array([3, 2, 1, 9])
+print(np.sort(arr1))
+print(np.sort(arr1)[::-1])
+print("-----------------------------")
+
+
+
+
+
+
+
