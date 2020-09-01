@@ -107,6 +107,19 @@ print(np.sort(arr1))
 print(np.sort(arr1)[::-1])
 print("-----------------------------")
 
+print('행렬곱')
+A = np.array([[1, 2, 3], [4, 5, 6]])
+B = np.array([[7, 8], [9, 10], [11, 12]])
+
+dot_product = np.dot(A, B)
+print(dot_product)
+print("-----------------------------")
+
+A = np.array([[1, 2], [3, 4]])
+T_m = np.transpose(A)
+print(T_m)
+print("-----------------------------")
+
 
 
 
